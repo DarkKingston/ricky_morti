@@ -4,7 +4,7 @@ const store = useCharactersStore();
 </script>
 
 <template>
-  <div>
+  <div style="margin-top: 15px">
     <button
       @click="store.prevPage"
       :class="{ disabled: store.currentPage === 1 }"

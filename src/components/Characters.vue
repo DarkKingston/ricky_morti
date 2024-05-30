@@ -128,9 +128,30 @@ onMounted(() => {
     grid-template-columns: repeat(1, auto);
   }
   .characters_item {
-    width: 600px;
-    height: 220px;
+    max-width: 600px;
+    max-height: 220px;
     margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .characters_item {
+    flex-direction: column;
+    max-width: 600px;
+    height: unset;
+    width: 100%;
+    max-height: unset;
+    margin: 0 auto;
+  }
+  .content_image {
+    width: 100%;
+    height: 270px;
+  }
+  .content_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
   }
 }
 </style>
